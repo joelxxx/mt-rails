@@ -1,0 +1,96 @@
+tenant_id,facility_id,model,field,label,value
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Acute Care,FRM AC
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Chronic Care,FRM CC 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From County Jail,FRM CO JAIL 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Crisis Management,FRM CM 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Diagnosis and Evaluation,FRM DE 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Free-World Hospital,FRM FW HOSP 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Hospital Galveston,FRM HG HOSP 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Impulsive/Self-injurious,FRM IS 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Intermediate Sanction Facility,FRM ISF 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Mood Disorder,FRM MD 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Neuro Cognitive,FRM NC 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Partial Remission Psychotic,FRM PRP 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Substance Abuse Treatment Facility,FRM SAFP 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From Texas Tech,FRM TXTECH 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,From UOA,FRM UOA 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,MH-MH Transfer,MH-MH 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_source,New TDCJ Intake,INTAKE 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,admit_type,MH INPatient,MHIP
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Administrative Segregation 1,ADSEG1
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Administrative Segregation 2,ADSEG2
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Administrative Segregation 3,ADSEG3
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Death Row,DEATH ROW
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Developmentally Disabled Program,DDP
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,General Population 1,GP1
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,General Population 2,GP2
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,General Population 3,GP3
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,General Population 4,GP4
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,General Population 5,GP5
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,In Prison Therapeutic Community,IPTC
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,InPatient Paraplegic,MD
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Intellectually Impaired,I-Imp
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Intermediate Sanction Facility,ISP
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Medical,MEDICAL
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Mental Health,MH
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Outside Trustee,OT
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Protective Custody,PC
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,S A Felony Punish Facility,SAFP
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Safekeeping 2,SK2
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Safekeeping 3,SK3
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Safekeeping 4,SK4
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Safekeeping 5,SK5
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Special Management,SPEC MGMT
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,State Jail 1,SJ1
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,State Jail 2,SJ2
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,State Jail 3,SJ3
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,State Jail 4,SJ4
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Unassign,UNASSIGN
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Unclassified,UNCLASS
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Unkown,UNKNOWN
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,custody_level,Youth Offender,YOP
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Administrative Error,ADMIN ERR
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Discharge back to UTO,DC UOA 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Deceased,DECEASED
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,MH-MH Transfer,MH-MH 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Released from TDCJ,REL TDCJ
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Acute Care,TRF AC 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Chronic Care,TRF CC 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Crisis Management,TRF CM 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Diagnosis and Evaluation,TRF DE 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer FW Hospital,TRF FW HOSP
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer HG Hospital,TRF HG HOSP
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer to Infirmary,TRF INF 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Impulsive/Self-injurious Control,TRF IS 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Mood Disorder,TRF MD 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Neuro Cognitive,TRF NC 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer Partial Remission Psychotic,TRF PRP 
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer UOA,TRF UOA
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer UOA - Geribed,TRF UOA-GERI
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer UOA - Mental Health,TRF UOA-MH
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,discharge_disposition,Transfer UOA - WC Unit,TRF UOA-WC
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,ACUTE CARE,AC
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,CHRONIC PSYCHOTIC,C-PSY
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,CRISIS MANAGEMENT,CM
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,DIAGNOSIS AND EVALUATION,DE
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,IMPULSIVE/SELF-INJURIOUS,IS
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,MOOD DISORDER,MD
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,NEURO COGNITIVE,NC
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,patient_type,PARTIAL REMISSION PSYCHOTIC,PR-PSY
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,functional_level,Level 1,FL1
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,functional_level,Level 2,FL2
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,functional_level,Level 3,FL3
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,functional_level,Level 4,FL4
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,functional_level,Level 1*,FL1*
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,functional_level,Psych-Cell Restricted,FLPCR
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,Precautions,precautions
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,Court Commit Eval,cc_eval
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,H2O monitoring,h2o
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,Compelled Meds,cmeds
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,Disability Housing Required,disab
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,Single-cell required,scell
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,VITEK,vitek
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,BMP,bmp
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,FI-2,fi2
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,SAFP DC,safp
+6d4c2da5-368b-4bca-9abd-b86b1a3326ac,,Patient,mh_trackers,Other,other

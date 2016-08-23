@@ -1,0 +1,18 @@
+presentation
+
+
+slides
+  - introduction .....
+  - microsoft MT overview and discussion
+  - influences to MT design and arch
+
+github
+  - maker subdir
+  - point up to the loading of the datasets checkin
+  - loading up data and doing the example
+  - reworking it to be MT
+  - adding a new tenant
+  - demonstrate separted DB, can even have same primary key id's
+  - migrations
+  - data loaders specific tenants with MT  /  architect v senior programmer
+
