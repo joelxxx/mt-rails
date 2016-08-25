@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
-  resources :products do 
-      collection { post :import}
-  end
 
-  resources :facilities do
-    collection { 
-      post :import
-      get  :prod_list
-    }
-  end
+  scope "/mt/:subdomain" do
+    resources :tenants
+    resources :products do 
+        collection { post :import}
+    end
+
+    resources :facilities do
+      collection { 
+        post :import
+        get  :prod_list
+      }
+    end
+  end  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

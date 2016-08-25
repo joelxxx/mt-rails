@@ -19,10 +19,19 @@ class FacilitiesController < ApplicationController
   include CsvControllerMixin
 
   def prod_list
-    @facid = params[:facility] || '1'
-    @facility = Facility.find(@facid)
-    logger.info("@facid is #{@facid}")
-    @prd = Product.where('facility_id = ' + @facid)
+    @facid = params[:facility]
+    if (nil == @facid) 
+      fs = Facility.all.limit(1)
+      if (nil != fs[0])
+        @facid = fs[0].id
+      end
+    end
+    
+    if (nil != @facid)
+      logger.info("Facility #{@facid}")
+      @facility = Facility.find(@facid)
+      @prd = Product.where("facility_id = #{@facid}")
+    end
 
 
     respond_to do | format |

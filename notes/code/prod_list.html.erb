@@ -26,8 +26,8 @@ function setupPage()
 
 <%= select("post", :facility_id,  options_for_select(Facility.pluck(:name, :id),@facid)) %>
 
-<h1><%= @facility.name %></h1>
-<h2><%= @facility.address %></h2>
+<h1><%= @facility!=nil ? @facility.name : 'none' %></h1>
+<h2><%= @facility!=nil ? @facility.address : 'none' %></h2>
 
 
 <table class="prod_table"  >
@@ -41,14 +41,16 @@ function setupPage()
     </tr>
   </thead>
   <tbody>
+    <% if @prd != nil %>
     <% @prd.each do |product| %>
-      <tr>
+      <tr class="<%= product.state %>">
         <td><%= product.flavor %></td>
         <td><%= product.mid %></td>
         <td><%= product.state %></td>
         <td><%= product.packaged %></td>
         <td><%= product.opened %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody> 
 </table>             
@@ -80,4 +82,21 @@ $(document).ready(function () {
 
 
 </script>
+
+
+<style>
+.stock {
+  background-color: #dddddd;
+}
+.ordered {
+  background-color: #88ffff;
+}
+.In-use {
+  background-color: #ff88ff;
+}
+.In-transit {
+  background-color: #ffff88;
+}
+
+</style>
 
