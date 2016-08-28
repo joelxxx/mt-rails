@@ -108,17 +108,10 @@ add in MT
   elevator
   support code
 
-create new tenant
-  migrate out of public
-create new tenant  
-  load second data set
+  create new tenant  
+    load second data set
 
-make a model and pin that model to public
-
-add more formatting to the display page
-  test grouping ... if load is not in order of flavors
-  add breaks for flavor changes if possible
-  better data sets -- more variety between stores
+  migrate initial tenant out of public
 
 
 

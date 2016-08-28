@@ -1,0 +1,39 @@
+Follow-along
+
+--------- FROM GIT ------------------
+git clone https://github.com/joelxxx/mt-rails.git
+cd mt-rails/custard
+bundle install
+rake db:create
+  \c custard_development;
+  \d
+rake db:migrate
+  \d
+  select * from schema_migrations;
+  ls db/migrate/   ---> shows same numbers recorded in schema_migrations tables
+ls db/migrate/
+rails s
+upload facilities from its CSV file
+  http://localhost:3000/facilities
+  import ./notes/dataSets/uploads/facilities.csv
+
+--> Show foreign key and belongs_to 
+
+export to get the assigned ID's for use in custards_id.csv
+  http://localhost:3000/facilities.csv
+  cd ./notes/dataSets/uploads/
+  cp custards.csv custards_id.csv
+  open custards_id.csv and adjust the id's
+  save it
+upload custards inventory now that the auto-assigned foreign keys for facilities have been entered
+  http://localhost:3000/products
+  import ./notes/dataSets/uploads/
+
+Now look at the working page for inventory and health code compliance reporting
+  http://localhost:3000/facilities/prod_list
+
+
+
+-------- Now lets do Multi-tenant --------------------------
+
+

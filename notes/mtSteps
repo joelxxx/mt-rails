@@ -1,0 +1,141 @@
+mtSteps
+
+
+
+---- Creating the MT version
+  https://github.com/influitive/apartment
+
+  add to Gemfile
+    gem 'apartment'
+  run
+    bundle exec rails generate apartment:install
+
+  rails generate scaffold tenant name:string description:string --timestamps
+
+    edit tenant.rb file
+      class Tenant < ActiveRecord::Base
+        before_create   :apartment_tenant_create
+
+        def self.tenant_names
+          tnames = []
+          Tenant.select("name").each do |tenant|
+            tnames << tenant.name
+          end
+          return tnames
+        end
+
+        def apartment_tenant_create()
+          Apartment::Tenant.create(self.name)
+        end
+
+        private
+          def tenant_params
+            params.require(:name, :description)
+          end
+      end    
+ 
+    
+  edit /config/initializers/apartment.rb
+    config.excluded_models = %w{ Tenant }
+
+    config.tenant_names = lambda { Tenant.tenant_names }
+    config.tenant_names = lambda { Tenant.pluck :name }
+
+    config.use_schemas = true
+
+    #config.persistent_schemas = ['shared_extensions']
+
+  #database.yml
+  #  schema_search_path: "public,shared_extensions"
+
+
+  rake db:migrate
+    [WARNING] - The list of tenants to migrate appears to be empty.
+    because it really is
+
+
+  edit routes file
+    scope "/mt/:subdomain" do
+      resources :facilities
+      resources :tenants
+    end
+    
+  edit applcation_controller.rb
+    before_filter :set_tenant
+    # Prevent CSRF attacks by raising an exception.
+    # For APIs, you may want to use :null_session instead.
+    protect_from_forgery with: :exception
+
+    def set_tenant
+      logger.info("Subdomain is #{params[:subdomain]}")
+      @tenant = params[:subdomain] || 'public'
+      logger.info("Setting tenant to #{@tenant}")
+      Apartment::Tenant.switch!(@tenant.downcase)
+    end
+
+    def url_options
+      {:subdomain => @tenant_id}.merge(super)
+    end    
+
+  make a dev tenant
+    rails c
+    nt = Tenant.create(name: "dev", description: "tenant for development")
+      
+  show db stuff
+    tables are separated...
+    select count(*) from products;
+      42
+    set search_path to dev;
+    select count(*) from products;
+      0
+    unique id's are each in their own schema space
+      select * from products_id_seq;
+      select * from public.products_id_seq;
+
+  show urls
+    http://localhost:3000/mt/dev/facilities/prod_list
+    http://localhost:3000/mt/public/facilities/prod_list
+
+problems
+  initial user is in the "public" namespace
+  so are the "pinned" models like tenant
+    needs to be moved
+
+
+-- data issues
+  how to use sql to move tenant data to new tenant
+  add data to dev tenant using the loaders
+
+  alter schema public rename to cust1;
+  create schema public;
+  -- need to get tables into public, move cust1.tenant data to public.tenant
+  rake db:migrate
+    [WARNING] - The list of tenants to migrate appears to be empty.
+  insert into tenants (select * from cust1.tenants);
+  insert into tenants values ('2','cust1','original ST client',now(), now());
+  --- looks like the sequence is still at 1.......
+  ALTER SEQUENCE tenants_id_seq RESTART WITH 3;
+  rake db:migrate
+    -doing the right thing now
+    Migrating dev tenant
+    Migrating cust1 tenant    
+  make new tenant
+    nt = Tenant.create(name: "c3", description: "the third customer")
+    worked !
+
+
+  upload facilities2.csv
+  http://localhost:3000/mt/c3/facilities
+  download it
+  facilites.csv
+  notice the auto ID = 1
+    show why in psql
+  fixup the product file with the id
+  upload the products
+
+  show the final demo
+    -- no code differences
+    -- no database differences
+    -- different data for different groups of users
+
+

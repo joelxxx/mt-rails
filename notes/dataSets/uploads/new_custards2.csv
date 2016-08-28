@@ -1,17 +1,17 @@
-Facility,Custard,State,ID,PackagedOn
-Dairy Queen,vanilla,stock,87231232,05/25/16
-Dairy Queen,vanilla,stock,87231233,05/25/16
-Dairy Queen,vanilla,stock,87231234,05/25/16
-Dairy Queen,vanilla,stock,87231235,05/25/16
-Dairy Queen,vanilla,stock,87231236,05/25/16
-Dairy Queen,vanilla,stock,87231237,05/25/16
-Dairy Queen,vanilla,stock,87231238,05/25/16
-Dairy Queen,vanilla,stock,87231239,05/25/16
-Dairy Queen,vanilla,In-use,87231290,05/25/16
-Dairy Queen,vanilla,In-use,87231291,05/25/16
-Dairy Queen,vanilla,In-use,87231292,05/25/16
-Dairy Queen,vanilla,In-transit,87231293,05/25/16
-Dairy Queen,vanilla,In-transit,87231294,05/25/16
+facility_id,flavor,state,mid,packaged
+Dairy Queen,vanilla,stock,87231232,2016-05-25
+Dairy Queen,vanilla,stock,87231233,2016-05-25
+Dairy Queen,vanilla,stock,87231234,2016-05-25
+Dairy Queen,vanilla,stock,87231235,2016-05-25
+Dairy Queen,vanilla,stock,87231236,2016-05-25
+Dairy Queen,vanilla,stock,87231237,2016-05-25
+Dairy Queen,vanilla,stock,87231238,2016-05-25
+Dairy Queen,vanilla,stock,87231239,2016-05-25
+Dairy Queen,vanilla,In-use,87231290,2016-05-25
+Dairy Queen,vanilla,In-use,87231291,2016-05-25
+Dairy Queen,vanilla,In-use,87231292,2016-05-25
+Dairy Queen,vanilla,In-transit,87231293,2016-05-25
+Dairy Queen,vanilla,In-transit,87231294,2016-05-25
 Dairy Queen,vanilla,ordered,,
 Dairy Queen,vanilla,ordered,,
 Dairy Queen,vanilla,ordered,,
