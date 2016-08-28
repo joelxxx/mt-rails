@@ -1,27 +1,14 @@
 mtSteps
 
 
-https://github.com/influitive/apartment
-
 
 ---- Creating the MT version
+  https://github.com/influitive/apartment
 
   add to Gemfile
     gem 'apartment'
   run
     bundle exec rails generate apartment:install
-  edit /config/initializers/apartment.rb
-    config.excluded_models = %w{ Tenant }
-
-    config.tenant_names = lambda { Tenant.tenant_names }
-    config.tenant_names = lambda { Tenant.pluck :name }
-
-    config.use_schemas = true
-
-    #config.persistent_schemas = ['shared_extensions']
-
-  #database.yml
-  #  schema_search_path: "public,shared_extensions"
 
   rails generate scaffold tenant name:string description:string --timestamps
 
@@ -46,45 +33,68 @@ https://github.com/influitive/apartment
             params.require(:name, :description)
           end
       end    
-    rake db:migrate
-      [WARNING] - The list of tenants to migrate appears to be empty.
-      because it really is
+ 
+    
+  edit /config/initializers/apartment.rb
+    config.excluded_models = %w{ Tenant }
+
+    config.tenant_names = lambda { Tenant.tenant_names }
+    config.tenant_names = lambda { Tenant.pluck :name }
+
+    config.use_schemas = true
+
+    #config.persistent_schemas = ['shared_extensions']
+
+  #database.yml
+  #  schema_search_path: "public,shared_extensions"
 
 
-    edit routes file
-      scope "/mt/:subdomain" do
-        resources :facilities
-        resources :tenants
-      end
-    edit applcation_controller.rb
-      before_filter :set_tenant
+  rake db:migrate
+    [WARNING] - The list of tenants to migrate appears to be empty.
+    because it really is
 
-      def set_tenant
-        @tenant_id = params[:subdomain] || "dev"
-      end
 
-      def url_options
-        {:subdomain => @tenant_id}.merge(super)
-      end    
+  edit routes file
+    scope "/mt/:subdomain" do
+      resources :facilities
+      resources :tenants
+    end
+    
+  edit applcation_controller.rb
+    before_filter :set_tenant
+    # Prevent CSRF attacks by raising an exception.
+    # For APIs, you may want to use :null_session instead.
+    protect_from_forgery with: :exception
 
-    make a dev tenant
-      rails c
-      nt = Tenant.create(name: "dev", description: "tenant for development")
+    def set_tenant
+      logger.info("Subdomain is #{params[:subdomain]}")
+      @tenant = params[:subdomain] || 'public'
+      logger.info("Setting tenant to #{@tenant}")
+      Apartment::Tenant.switch!(@tenant.downcase)
+    end
+
+    def url_options
+      {:subdomain => @tenant_id}.merge(super)
+    end    
+
+  make a dev tenant
+    rails c
+    nt = Tenant.create(name: "dev", description: "tenant for development")
       
-    show db stuff
-      tables are separated...
-      select count(*) from products;
-        42
-      set search_path to dev;
-      select count(*) from products;
-        0
-      unique id's are each in their own schema space
-        select * from products_id_seq;
-        select * from public.products_id_seq;
+  show db stuff
+    tables are separated...
+    select count(*) from products;
+      42
+    set search_path to dev;
+    select count(*) from products;
+      0
+    unique id's are each in their own schema space
+      select * from products_id_seq;
+      select * from public.products_id_seq;
 
-    show urls
-      http://localhost:3000/mt/dev/facilities/prod_list
-      http://localhost:3000/mt/public/facilities/prod_list
+  show urls
+    http://localhost:3000/mt/dev/facilities/prod_list
+    http://localhost:3000/mt/public/facilities/prod_list
 
 problems
   initial user is in the "public" namespace
