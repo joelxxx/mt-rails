@@ -96,6 +96,19 @@ mtSteps
     http://localhost:3000/mt/dev/facilities/prod_list
     http://localhost:3000/mt/public/facilities/prod_list
 
+
+add second tenant for the downtown DQ
+
+  upload facilities2.csv
+  http://localhost:3000/mt/c3/facilities
+  download it
+  facilites.csv
+  notice the auto ID = 1
+    show why in psql
+  fixup the product file with the id
+  upload the products
+
+  
 problems
   initial user is in the "public" namespace
   so are the "pinned" models like tenant
@@ -106,13 +119,18 @@ problems
   how to use sql to move tenant data to new tenant
   add data to dev tenant using the loaders
 
-  alter schema public rename to cust1;
-  create schema public;
-  -- need to get tables into public, move cust1.tenant data to public.tenant
-  rake db:migrate
-    [WARNING] - The list of tenants to migrate appears to be empty.
+  nt = Tenant.create(name: "cust1", description: "Beloved first customer")
+  -- Swap names on public and cust1 schemas 
+    custard_development=# alter schema cust1 rename to t1;
+    ALTER SCHEMA
+    custard_development=# alter schema public rename to cust1;
+    ALTER SCHEMA
+    custard_development=# alter schema t1 rename to public;
+    ALTER SCHEMA 
+
+
   insert into tenants (select * from cust1.tenants);
-  insert into tenants values ('2','cust1','original ST client',now(), now());
+  select * from tenants_id_seq;
   --- looks like the sequence is still at 1.......
   ALTER SEQUENCE tenants_id_seq RESTART WITH 3;
   rake db:migrate
@@ -124,14 +142,6 @@ problems
     worked !
 
 
-  upload facilities2.csv
-  http://localhost:3000/mt/c3/facilities
-  download it
-  facilites.csv
-  notice the auto ID = 1
-    show why in psql
-  fixup the product file with the id
-  upload the products
 
   show the final demo
     -- no code differences
