@@ -1,5 +1,6 @@
 
-
+rails --version
+Rails 4.2.3
 
 create it
   rails new custard --database postgresql

@@ -1,5 +1,8 @@
 Follow-along
 
+rails --version
+Rails 4.2.3
+
 --------- FROM GIT ------------------
 git clone https://github.com/joelxxx/mt-rails.git
 cd mt-rails/custard
