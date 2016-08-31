@@ -102,17 +102,3 @@ bring in display page
 
 
 
-
-
-add in MT
-  rails generate scaffold tenant name:string description:string --timestamps
-  elevator
-  support code
-
-  create new tenant  
-    load second data set
-
-  migrate initial tenant out of public
-
-
-
