@@ -27,4 +27,9 @@
 <br>
 
 <%= link_to 'New Facility', new_facility_path %>
-<%= csv_upload import_facilities_path %>
+
+<%= form_tag import_facilities_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import CSV" %>
+<% end %>
+

@@ -16,7 +16,11 @@ class FacilitiesController < ApplicationController
   def show
   end
   
-  include CsvControllerMixin
+  def import
+    logger.info("Importing file #{params[:file]} to Facilities")
+    Facility.importCSV(params[:file])
+    redirect_to :action => 'index', notice: "import Complete"
+  end
 
   def prod_list
     @facid = params[:facility] || '1'
