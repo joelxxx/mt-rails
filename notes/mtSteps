@@ -99,8 +99,10 @@ mtSteps
 
 add second tenant for the downtown DQ
 
+  nt = Tenant.create(name: "cust2", description: "tenant for new customer")
+
   upload facilities2.csv
-  http://localhost:3000/mt/c3/facilities
+  http://localhost:3000/mt/cust2/facilities
   download it
   facilites.csv
   notice the auto ID = 1

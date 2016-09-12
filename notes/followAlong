@@ -13,7 +13,8 @@ rake db:create
 rake db:migrate
   \d
   select * from schema_migrations;
-  ls db/migrate/   ---> shows same numbers recorded in schema_migrations tables
+  ls db/migrate/   
+  ---> shows same numbers recorded in schema_migrations tables
 ls db/migrate/
 rails s
 upload facilities from its CSV file
