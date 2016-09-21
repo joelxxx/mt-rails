@@ -1,9 +1,55 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Beanstalk deploy rails app
 
-Things you may want to cover:
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_rails.html
+
+oregon
+custard
+no-ssh
+
+
+How to setup RDS for your rails app in bean stalk
+
+http://ruby.awsblog.com/post/Tx2AK2MFX0QHRIO/Deploying-Ruby-Applications-to-AWS-Elastic-Beanstalk-with-Git
+
+Ruby deploy container
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby.container.html
+
+
+Rails + RDS
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby.rds.html
+
+
+eb init , ssh yes
+Your identification has been saved in /Users/JoelS/.ssh/aws-eb.
+Your public key has been saved in /Users/JoelS/.ssh/aws-eb.pub.
+The key fingerprint is:
+SHA256:7ToQ1BjOzIyQ0gwFiHX26CIDab2OabD7EgCFdp04JAk aws-eb
+The key's randomart image is:
++---[RSA 2048]----+
+|E@Bo= o+         |
+|*+*B %o .        |
+|=o..+.B          |
+|+  .. .  .       |
+|= ...  .S .      |
+|o++.  .  .       |
+|.= .   .  .      |
+|o.      ..       |
+|.o.     ..       |
++----[SHA256]-----+
+Enter passphrase:
+WARNING: Uploaded SSH public key for "aws-eb" into EC2 for region us-west-2.
+
+create new / mtrails
+
+enivronment name mtrails-env
+   mtrails-env.us-east-1.elasticbeanstalk.com
+
+rds 
+  user oneone
+  pass twotwo
+
 
 * Ruby version
 
@@ -23,6 +69,3 @@ Things you may want to cover:
 
 * ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

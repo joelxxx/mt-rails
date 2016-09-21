@@ -1,0 +1,8 @@
+ELB
+
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_rails.html
+
+
+eb init
+add puma to Gemfiles
+
